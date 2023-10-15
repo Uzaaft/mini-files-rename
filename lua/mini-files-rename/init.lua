@@ -1,9 +1,9 @@
-local u = require(".utils")
+local u = require("mini-files-rename.utils")
 
 
 local M = {}
 
-M.config = function()
+M.config = function(config)
  vim.api.nvim_create_autocmd("User", {
   pattern = "MiniFilesActionRename",
   callback = function(args)
@@ -13,3 +13,5 @@ M.config = function()
   end,
  })
 end
+
+return M
